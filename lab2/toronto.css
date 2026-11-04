@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Stilovi za navigacijski meni i linkove */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+nav li {
+    display: inline-block; /* Koristimo inline-block da omogućimo prijem širine u block načinu */
+    margin-right: 10px;
+}
+
+nav a {
+    /* Stilovi prema zahtjevu */
+    color: #ffffff;
+    background-color: #ce1141; /* Raptors crvena boja */
+    padding: 12px 15px;
+    border: 2px solid #000000;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    
+    /* Zadana širina */
+    width: 200px;
+    
+    /* Prikaz: Trenutno postavljeno na block (možete promijeniti u inline za testiranje) */
+    display: block; 
+}
+
+/* Hover efekat (jasno uočljiv i čitljiv) */
+nav a:hover {
+    background-color: #387c6d; /* Kontrastna zelena boja */
+    color: #000000;
+    border-color: #ffffff;
+}
+
+/* Stilovi za odjeljke */
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #ce1141;
+    margin-top: 0;
+}
