@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoTrack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="app-header">
+    <div class="header-content">
+      <a class="brand" href="#summary-title" aria-label="EcoTrack, početna stranica">
+        <span class="brand-name">EcoTrack</span>
+        <span class="brand-tagline">Praćenje ekološkog efekta kompanija</span>
+      </a>
+      <details class="profile-menu">
+        <summary>
+          <span class="profile-avatar" aria-hidden="true">F</span>
+          <span class="profile-name">Faris</span>
+          <span class="profile-caret" aria-hidden="true"></span>
+        </summary>
+        <nav class="profile-dropdown" aria-label="Meni korisničkog profila">
+          <a href="#profil">Moj profil</a>
+          <a href="#postavke">Postavke</a>
+          <a href="#odjava">Odjava</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+    <main class="dashboard">
+      <section aria-labelledby="summary-title">
+        <h2 id="summary-title">Pregled potrošnje</h2>
+        <div class="summary-grid">
+          <article class="summary-card">
+            <h3>Ukupna potrošnja</h3>
+            <p class="summary-value">12.840 kWh</p>
+            <p>U tekućem mjesecu</p>
+          </article>
+          <article class="summary-card">
+            <h3>Broj mjerenja</h3>
+            <p class="summary-value">38</p>
+            <p>U tekućem mjesecu</p>
+          </article>
+          <article class="summary-card">
+            <h3 class="plant-name">Donaudampfschifffahrtsgesellschaftskraftwerk</h3>
+            <p class="summary-value">4.260 kWh</p>
+            <p>Najveća zabilježena potrošnja</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="history-title">
+        <h2 id="history-title">Historija mjerenja</h2>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Historija potrošnje; tabela se može horizontalno pomjerati">
+          <table>
+            <caption>Historija potrošnje energenata</caption>
+            <thead>
+              <tr>
+                <th scope="col">Datum</th>
+                <th scope="col">Postrojenje</th>
+                <th scope="col">Energent</th>
+                <th scope="col">Potrošnja</th>
+                <th scope="col">Jedinica</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08.11.2026.</td>
+                <td>Centralno postrojenje</td>
+                <td>Struja</td>
+                <td>1.280</td>
+                <td>kWh</td>
+                <td>Potvrđeno</td>
+              </tr>
+              <tr>
+                <td>07.11.2026.</td>
+                <td>Donaudampfschifffahrtsgesellschaftskraftwerk</td>
+                <td>Plin</td>
+                <td>860</td>
+                <td>m³</td>
+                <td>Potvrđeno</td>
+              </tr>
+              <tr>
+                <td>06.11.2026.</td>
+                <td>Sjeverni pogon</td>
+                <td>Voda</td>
+                <td>142</td>
+                <td>m³</td>
+                <td>Na čekanju</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    <section>
+        <h2>Forma za unos</h2>
+        <form>
+          <p>Polja označena zvezdicom (*) su obavezna.</p>
+          <label for="energent">Izbor energenta (*):</label>
+          <select id="energent" name="energent" required>
+            <option value="">Odaberite energenta</option>
+            <option value="struja">Struja</option>
+            <option value="plin">Plin</option>
+            <option value="voda">Voda</option>
+          </select>
+          <label for="potrosnja">Količina potrošnje (*):</label>
+          <input type="number" id="potrosnja" name="potrosnja" required>
+          <label for="datum">Datum očitanja (*):</label>
+          <input type="date" id="datum" name="datum" required>
+          <label for="incident">Hitna intervencija?</label>
+          <input type="checkbox" id="incident" name="incident"><br>
+          <button type="submit" id="slanje" name="slanje">Slanje</button><br>
+        </form>
+    </section>
+   
+
+    </main>
+</body>
+</html>
