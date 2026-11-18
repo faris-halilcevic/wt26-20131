@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <title>Evidencija troškova</title>
+</head>
+<body>
+
+    <h2>Evidencija troškova</h2>
+
+    <form id="evidencija-form">
+        <input type="text" id="naziv" placeholder="Naziv aktivnosti/troška">
+        <input type="number" id="iznos" placeholder="Iznos (KM)" step="0.01">
+        <button type="submit">Dodaj stavku</button>
+        <span id="poruka-greske" class="greska"></span>
+    </form>
+
+    <table id="tabela-evidencije">
+        <thead>
+            <tr>
+                <th>Naziv stavke</th>
+                <th>Iznos (KM)</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-tijelo">
+            <tr>
+                <td>Internet</td>
+                <td>45.00</td>
+            </tr>
+            <tr>
+                <td>Struja</td>
+                <td>85.50</td>
+            </tr>
+            <tr>
+                <td>Voda</td>
+                <td>30.20</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="zbir-red">
+                <td>Ukupno zbir:</td>
+                <td id="ukupni-zbir">160.70</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script src="z3.js"></script>
+</body>
+</html>
